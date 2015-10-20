@@ -5,8 +5,9 @@ class CreateItem < ActiveRecord::Migration
       t.text :description
       t.integer :price, null: false
       t.references :category, null: false
+      t.datetime :expire_at, null: false
 
-      t.timestamp null: false
+      t.timestamps null: false
     end
   end
 end

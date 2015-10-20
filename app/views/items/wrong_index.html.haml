@@ -1,0 +1,22 @@
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Description
+      %th
+        Category
+      %th
+        Total
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td
+          = item.title
+        %td
+          = item.description
+        %td
+          = item.category.title
+        %td
+          = @items_count[item.category.title]
